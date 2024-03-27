@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity() {
         listDaftarTeman.add(Data(R.drawable.t1, "Soleman Merani", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.t1, "Wellem Manuaron", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.t1, "Soleman Merani", "081222347889"))
+        listDaftarTeman.add(Data(R.drawable.t1, "Wellem Manuaron", "081222347889"))
+        listDaftarTeman.add(Data(R.drawable.t1, "Soleman Merani", "081222347889"))
+        listDaftarTeman.add(Data(R.drawable.t1, "Wellem Manuaron", "081222347889"))
+        listDaftarTeman.add(Data(R.drawable.t1, "Soleman Merani", "081222347889"))
 
 
         daftarTemanRecyclerView.layoutManager = LinearLayoutManager(this)
