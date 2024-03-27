@@ -16,13 +16,13 @@ class LoginActivity : AppCompatActivity() {
 
         // Tombol berpindah ke halaman Home
         binding.btnLogin.setOnClickListener {
-            val activityHome = Intent(this,MainActivity::class.java)
+            val activityHome = Intent(this, MainActivity::class.java)
             startActivity(activityHome)
         }
 
         // Link untuk berpindah ke halaman lupa Password
         binding.linkForgetPassword.setOnClickListener{
-            val intent = Intent(this,ForgetPasswordActivity::class.java)
+            val intent = Intent(this, ForgetPasswordActivity::class.java)
             startActivity(intent)
 
             // Pesan saat pindah ke halaman forget password
