@@ -16,15 +16,15 @@ class Adapter(private val namaList : ArrayList<Data>):RecyclerView.Adapter<Adapt
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("Not yet implemented")
         val itemData = LayoutInflater.from(parent.context).inflate(R.layout.example_item, parent, false)
         return ViewHolder(itemData)
     }
 
-    override fun getItemCount(): Int = namaList.size
+    override fun getItemCount(): Int {
+        return namaList.size
+    }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
         val currentItem = namaList[position]
 
         holder.gambar.setImageResource(currentItem.gambar)
