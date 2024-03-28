@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         listDaftarTeman.add(Data(R.drawable.dian, "Diana Florice Iklai", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.bewax, "Berto Wato", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.marnix, "Daniel Marnix Akwan", "081222347889"))
+        listDaftarTeman.add(Data(R.drawable.avinex, "Aviana X C Ibo", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.marshal, "Marshal Yonatan", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.keren, "Keren Marini", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.kern, "Kern Bindosano", "081222347889"))
@@ -44,6 +45,8 @@ class MainActivity : AppCompatActivity() {
         listDaftarTeman.add(Data(R.drawable.will, "Wellem Manuaron", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.natan, "Nataniel Pakibori", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.yonat, "Yonatan Airei", "081222347889"))
+        listDaftarTeman.add(Data(R.drawable.icko, "Ikolaus Uropmabin", "081222347889"))
+        listDaftarTeman.add(Data(R.drawable.mas, "Mas Kogoya", "081222347889"))
 
 
         daftarTemanRecyclerView.layoutManager = LinearLayoutManager(this)
