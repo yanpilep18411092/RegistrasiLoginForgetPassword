@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         listDaftarTeman.add(Data(R.drawable.kern, "Kern Bindosano", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.frans, "Fransiskus Jeujanan", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.dancok, "Daniel Srau", "081222347889"))
+        listDaftarTeman.add(Data(R.drawable.bung_gep, "Gabriel Marini", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.elly, "Elly Ansek", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.imanuel, "Imanuel Merani", "081222347889"))
         listDaftarTeman.add(Data(R.drawable.jodi, "Jodi Mamoribo", "081222347889"))
