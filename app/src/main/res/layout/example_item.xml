@@ -18,7 +18,7 @@
 
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/iv_Foto"
+            android:id="@+id/id_Foto"
             android:layout_width="80dp"
             android:layout_height="83dp"
             android:padding="5dp"
@@ -43,7 +43,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/tv_Nama"
+                android:id="@+id/id_Nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Teman"
@@ -52,7 +52,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/tv_NoHp"
+                android:id="@+id/id_NoHp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

@@ -9,15 +9,33 @@ import androidx.recyclerview.widget.RecyclerView
 
 class Adapter(private val namaList : ArrayList<Data>):RecyclerView.Adapter<Adapter.ViewHolder>() {
 
-    class ViewHolder (itemData : View) : RecyclerView.ViewHolder(itemData) {
-        val gambar : ImageView = itemData.findViewById(R.id.iv_Foto)
-        val nama : TextView = itemData.findViewById(R.id.tv_Nama)
-        val handphone : TextView = itemData.findViewById(R.id.tv_NoHp)
+    private lateinit var mListener: onItemClickListener
+
+    interface onItemClickListener {
+        fun onItemClick (position: Int)
     }
+
+    fun setOnItemClickListener(listener: onItemClickListener) {
+        mListener = listener
+    }
+
+    class ViewHolder (itemData : View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemData) {
+        val gambar : ImageView = itemData.findViewById(R.id.id_Foto)
+        val nama : TextView = itemData.findViewById(R.id.id_Nama)
+        val handphone : TextView = itemData.findViewById(R.id.id_NoHp)
+
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
+        }
+    }
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemData = LayoutInflater.from(parent.context).inflate(R.layout.example_item, parent, false)
-        return ViewHolder(itemData)
+        return ViewHolder(itemData, mListener)
     }
 
     override fun getItemCount(): Int {
