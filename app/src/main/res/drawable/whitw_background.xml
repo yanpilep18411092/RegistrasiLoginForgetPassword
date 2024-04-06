@@ -14,7 +14,10 @@
             <size
                 android:width="100dp"
                 android:height="100dp"/>
-            <shadow android:color="#80000000" android:radius="5dp"  android:dx="0"  android:dy="2" />
+<!--            <shadow android:color="#80000000"-->
+<!--                android:radius="5dp"-->
+<!--                android:dx="0"-->
+<!--                android:dy="2" />-->
         </shape>
     </item>
 </selector>

@@ -1,21 +1,16 @@
 package com.example.registrasiloginforgetpassword
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.registrasiloginforgetpassword.databinding.ActivityFragmentBinding
-import com.example.registrasiloginforgetpassword.databinding.ActivityMainBinding
-import java.util.Objects
 
-class MainActivity : AppCompatActivity() {
+class FragmentActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityFragmentBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityFragmentBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         replaceFragment(HomeFragment())
@@ -38,7 +33,4 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.replace(R.id.frame_layout, fragment)
         fragmentTransaction.commit()
     }
-
-
-
 }
