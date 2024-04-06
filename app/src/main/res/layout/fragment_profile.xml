@@ -31,7 +31,7 @@
                     app:shapeAppearanceOverlay="@style/circular"
                     app:strokeColor="@color/teal_700"
                     app:strokeWidth="3dp"
-                    tools:srcCompat="@drawable/marnix" />
+                    android:src="@drawable/t1"/>
 
                 <TextView
                     android:id="@+id/tvp1"
