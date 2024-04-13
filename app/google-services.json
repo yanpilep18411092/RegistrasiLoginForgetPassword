@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "713210598931",
+    "project_id": "daftar-teman-firebase",
+    "storage_bucket": "daftar-teman-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713210598931:android:b791d4a7e397a6094e11e6",
+        "android_client_info": {
+          "package_name": "com.example.registrasiloginforgetpassword"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyiXO_D8vpFv7CCkGcGI6BnXAGbit5w3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

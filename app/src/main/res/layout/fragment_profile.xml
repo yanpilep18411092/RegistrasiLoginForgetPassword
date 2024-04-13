@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_profileuser"
     tools:context=".ProfileFragment">
 
     <ScrollView
@@ -15,8 +16,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="725dp"
-                android:background="@drawable/bg_profileuser">
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/iv_Foto"
@@ -25,13 +29,13 @@
                     android:layout_marginTop="20dp"
                     android:padding="5dp"
                     android:scaleType="centerCrop"
+                    android:src="@drawable/t1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/circular"
                     app:strokeColor="@color/teal_700"
-                    app:strokeWidth="3dp"
-                    android:src="@drawable/t1"/>
+                    app:strokeWidth="3dp" />
 
                 <TextView
                     android:id="@+id/tvp1"
@@ -60,7 +64,7 @@
                 <LinearLayout
                     android:id="@+id/linearLayout3"
                     android:layout_width="match_parent"
-                    android:layout_height="420dp"
+                    android:layout_height="380dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="24dp"
@@ -181,17 +185,17 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Ubah"
-                            android:textSize="16sp"
                             android:textAlignment="textEnd"
-                            android:textColor="#4F4F4F" />
+                            android:textColor="#4F4F4F"
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#d9d9d9"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:background="#d9d9d9" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -215,17 +219,17 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Ubah"
-                            android:textSize="16sp"
                             android:textAlignment="textEnd"
-                            android:textColor="#4F4F4F" />
+                            android:textColor="#4F4F4F"
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#d9d9d9"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:background="#d9d9d9" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -249,17 +253,17 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="0812-4003-4018"
-                            android:textSize="16sp"
                             android:textAlignment="textEnd"
-                            android:textColor="#4F4F4F" />
+                            android:textColor="#4F4F4F"
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#d9d9d9"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:background="#d9d9d9" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -283,9 +287,9 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Buper Street Waena Expo"
-                            android:textSize="16sp"
                             android:textAlignment="textEnd"
-                            android:textColor="#4F4F4F" />
+                            android:textColor="#4F4F4F"
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
