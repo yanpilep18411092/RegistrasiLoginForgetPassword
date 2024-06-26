@@ -22,7 +22,7 @@ class Adapter(private val namaList : ArrayList<Data>):RecyclerView.Adapter<Adapt
     class ViewHolder (itemData : View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemData) {
         val foto : ImageView = itemData.findViewById(R.id.id_Foto)
         val nama : TextView = itemData.findViewById(R.id.id_Nama)
-        val handphone : TextView = itemData.findViewById(R.id.id_NoHp)
+        //val handphone : TextView = itemData.findViewById(R.id.id_NoHp)
 
         init {
             itemView.setOnClickListener {
@@ -47,6 +47,6 @@ class Adapter(private val namaList : ArrayList<Data>):RecyclerView.Adapter<Adapt
 
         holder.foto.setImageResource(currentItem.foto)
         holder.nama.text = currentItem.nama
-        holder.handphone.text = currentItem.handphone
+        //holder.handphone.text = currentItem.handphone
     }
 }

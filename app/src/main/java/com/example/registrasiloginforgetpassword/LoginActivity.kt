@@ -22,18 +22,42 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        // Tombol berpindah ke halaman Home
+        // Tombol Login
         binding.btnLogin.setOnClickListener {
+            val email = binding.edtEmail.text.toString()
+            val password = binding.edtPassword.text.toString()
 
-            val activityHome = Intent(this, MainActivity::class.java)
-            startActivity(activityHome)
-            finish()
+            // Cek E-Mail
+            if (email.isEmpty()) {
+                binding.edtEmail.error = "E-Mail harus diisi"
+                binding.edtEmail.requestFocus()
+                return@setOnClickListener
+            }
 
-            //Pesan saat pindah ke halaman Home
-            Toast.makeText(this, "Welcome to Home page", Toast.LENGTH_SHORT).show()
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                binding.edtEmail.error = "E-Mail harus Valid"
+                binding.edtEmail.requestFocus()
+                return@setOnClickListener
+            }
+
+            // Cek Password
+            if (password.isEmpty()) {
+                binding.edtPassword.error = "Password harus diisi"
+                binding.edtPassword.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (password.length < 6 ) {
+                binding.edtPassword.error = "Password minimal 6 karakter!"
+                binding.edtPassword.requestFocus()
+                return@setOnClickListener
+            }
+
+            loginUserFirebase(email, password)
         }
 
-        // Link untuk berpindah ke halaman lupa Password
+
+        // Link ke halaman lupa Password
         binding.linkForgetPassword.setOnClickListener{
             val intent = Intent(this, ForgetPasswordActivity::class.java)
             startActivity(intent)
@@ -42,7 +66,7 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "Halaman forget password", Toast.LENGTH_SHORT).show()
         }
 
-        // Link untuk berpindah ke halaman Register
+        // Link ke halaman Register
         binding.createAccount.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
@@ -51,4 +75,29 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "Halaman Registrasi", Toast.LENGTH_SHORT).show()
         }
     }
+    private fun loginUserFirebase(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) {
+            if (it.isSuccessful) {
+                Intent(this, MainActivity::class.java).also {
+                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(it)
+                }
+                finish()
+            } else {
+                Toast.makeText(this, "${it.exception?.message}",Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (auth.currentUser != null) {
+            Intent(this, MainActivity2::class.java).also {
+                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(it)
+            }
+        }
+    }
+
+
 }

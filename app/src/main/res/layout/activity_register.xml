@@ -9,205 +9,211 @@
     android:background="@drawable/bg_register2"
     tools:context=".RegisterActivity">
 
-    <!--  Open Main Content  -->
-    <LinearLayout
-        android:id="@+id/linearLayout7"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
-        <!--  Tittle Register  -->
+        <!--  Open Main Content  -->
         <LinearLayout
+            android:id="@+id/linearLayout7"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="50dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/icon_register"
-                android:scaleType="center"
-                android:scaleX="1.5"
-                android:scaleY="1.5" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
-                android:fontFamily="sans-serif-condensed"
-                android:includeFontPadding="false"
-                android:text="Register"
-                android:textColor="#FFFFFF"
-                android:textSize="45dp" />
-
-        </LinearLayout>
-
-        <!--  Form Register  -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingStart="50dp"
-            android:paddingEnd="50dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <!--  Username  -->
-            <TextView
-                android:id="@+id/tvUsername"
+            <!--  Tittle Register  -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:gravity="end"
-                android:text="Username"
-                android:textColor="#13BABA"
-                android:textSize="17dp" />
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/edtUsernameReg"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:background="@drawable/edit_text_register"
-                android:ems="10"
-                android:hint="Type username"
-                android:inputType="textPersonName"
-                android:paddingStart="10dp"
-                android:textColor="#13BABA"
-                android:textColorHint="#88877B"
-                android:textSize="15sp" />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/icon_register"
+                    android:scaleType="center"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5" />
 
-            <!--  E-Mail  -->
-            <TextView
-                android:id="@+id/textViewEmail"
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:includeFontPadding="false"
+                    android:text="Register"
+                    android:textColor="#FFFFFF"
+                    android:textSize="45dp" />
+
+            </LinearLayout>
+
+            <!--  Form Register  -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-condensed"
-                android:gravity="end"
-                android:includeFontPadding="false"
-                android:text="Email"
-                android:textColor="#13BABA"
-                android:textSize="17dp" />
+                android:layout_marginTop="100dp"
+                android:orientation="vertical"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp">
 
-            <EditText
-                android:id="@+id/edtEmailReg"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:background="@drawable/edit_text_register"
-                android:ems="10"
-                android:hint="Type email"
-                android:inputType="textEmailAddress"
-                android:paddingStart="10dp"
-                android:textColor="#13BABA"
-                android:textColorHint="#88877B"
-                android:textSize="15sp" />
+                <!--  Username  -->
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
+                    android:text="Username"
+                    android:textColor="#13BABA"
+                    android:textSize="17dp" />
 
-            <!--  Password  -->
-            <TextView
-                android:id="@+id/textViewPass"
+                <EditText
+                    android:id="@+id/edtUsernameReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edt_style"
+                    android:ems="10"
+                    android:hint="Type username"
+                    android:inputType="textPersonName"
+                    android:paddingStart="10dp"
+                    android:textColor="#13BABA"
+                    android:textColorHint="#88877B"
+                    android:textSize="15sp" />
+
+                <!--  E-Mail  -->
+                <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:text="Email"
+                    android:textColor="#13BABA"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/edtEmailReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edt_style"
+                    android:ems="10"
+                    android:hint="Type email"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="10dp"
+                    android:textColor="#13BABA"
+                    android:textColorHint="#88877B"
+                    android:textSize="15sp" />
+
+                <!--  Password  -->
+                <TextView
+                    android:id="@+id/textViewPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
+                    android:text="Password"
+                    android:textColor="#13BABA"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/edtPasswordReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edt_style"
+                    android:ems="10"
+                    android:hint="Type password"
+                    android:inputType="textPassword"
+                    android:paddingStart="10dp"
+                    android:textColor="#13BABA"
+                    android:textColorHint="#88877B"
+                    android:textSize="15sp" />
+
+                <!--  Retype Password  -->
+                <TextView
+                    android:id="@+id/textViewRetypePass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
+                    android:text="Retype-Password"
+                    android:textColor="#13BABA"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/edtRetypePassReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edt_style"
+                    android:ems="10"
+                    android:hint="Retype password"
+                    android:inputType="textPassword"
+                    android:paddingStart="10dp"
+                    android:textColor="#13BABA"
+                    android:textColorHint="#88877B"
+                    android:textSize="15sp" />
+
+                <!--  Tombol Register  -->
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/btn_dual_color"
+                    android:scaleX="1"
+                    android:scaleY="1.3"
+                    android:text="Register"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-condensed"
-                android:gravity="end"
-                android:text="Password"
-                android:textColor="#13BABA"
-                android:textSize="17dp" />
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp">
 
-            <EditText
-                android:id="@+id/edtPasswordReg"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:background="@drawable/edit_text_register"
-                android:ems="10"
-                android:hint="Type password"
-                android:inputType="textPassword"
-                android:paddingStart="10dp"
-                android:textColor="#13BABA"
-                android:textColorHint="#88877B"
-                android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/tv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:includeFontPadding="false"
+                    android:text="Already have account?"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
 
-            <!--  Retype Password  -->
-            <TextView
-                android:id="@+id/textViewRetypePass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-condensed"
-                android:gravity="end"
-                android:text="Retype-Password"
-                android:textColor="#13BABA"
-                android:textSize="17dp" />
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:includeFontPadding="false"
+                    android:text="Login"
+                    android:textColor="#FF2D5FC1"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/edtRetypePassReg"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:background="@drawable/edit_text_register"
-                android:ems="10"
-                android:hint="Retype password"
-                android:inputType="textPassword"
-                android:paddingStart="10dp"
-                android:textColor="#13BABA"
-                android:textColorHint="#88877B"
-                android:textSize="15sp" />
-
-            <!--  Tombol Register  -->
-            <Button
-                android:id="@+id/btnRegister"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/btn_dual_color"
-                android:scaleX="1"
-                android:scaleY="1.3"
-                android:text="Register"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp" />
+            </LinearLayout>
 
         </LinearLayout>
+        <!--  Close Main Content  -->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="12dp">
-
-            <TextView
-                android:id="@+id/tv6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:includeFontPadding="false"
-                android:text="Already have account?"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tvLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:fontFamily="sans-serif-condensed"
-                android:includeFontPadding="false"
-                android:text="Login"
-                android:textColor="#FF2D5FC1"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-    <!--  Close Main Content  -->
+    </ScrollView>
 
 
 

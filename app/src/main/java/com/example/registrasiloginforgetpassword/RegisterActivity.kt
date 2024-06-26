@@ -11,8 +11,8 @@ import com.google.firebase.auth.FirebaseAuth
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
-
-    private lateinit var auth : FirebaseAuth
+    lateinit var auth : FirebaseAuth
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
@@ -21,10 +21,10 @@ class RegisterActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         binding.btnRegister.setOnClickListener {
 
-            var email = binding.edtEmailReg.text.toString()
-            var username = binding.edtUsernameReg.text.toString()
-            var password = binding.edtPasswordReg.text.toString()
-            var retypePass = binding.edtRetypePassReg.text.toString()
+            val email = binding.edtEmailReg.text.toString()
+            val username = binding.edtUsernameReg.text.toString()
+            val password = binding.edtPasswordReg.text.toString()
+            val retypePass = binding.edtRetypePassReg.text.toString()
 
             // Cek Username
             if (username.isEmpty()) {
@@ -67,25 +67,47 @@ class RegisterActivity : AppCompatActivity() {
             }
 
             daftarUserFirebase(email, password)
-
-//            val activityLogin = Intent(this, LoginActivity::class.java )
-//            startActivity(activityLogin)
         }
+
         // Link untuk berpindah ke halaman Login
         binding.tvLogin.setOnClickListener{
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+
+    }
+
+    // Fungsi untuk mendaftarkan user
+    private fun daftarUserFirebase(email: String, password: String) {
+        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) {
+            if (it.isSuccessful) {
+//                    startActivity(Intent(this, LoginActivity::class.java))
+                Intent(this, MainActivity::class.java).also {
+                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(it)
+                }
+            } else {
+                Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
-    private fun daftarUserFirebase(email: String, password: String) {
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) {
-                if (it.isSuccessful) {
-                    Toast.makeText(this, "Akun berhasil dibuat", Toast.LENGTH_SHORT).show()
-                }else{
-                    Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
-                }
+    override fun onStart() {
+        super.onStart()
+        if (auth.currentUser != null) {
+            Intent(this, MainActivity::class.java).also {
+                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(it)
             }
+        }
     }
+
+
+
+
+
+
+
+
+
+
 }

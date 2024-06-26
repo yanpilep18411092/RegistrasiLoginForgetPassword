@@ -4,30 +4,27 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.registrasiloginforgetpassword.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityDetailBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail)
+        binding = ActivityDetailBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val gambar:ImageView = findViewById(R.id.iv_Foto)
-        val nama:TextView = findViewById(R.id.tv_Nama)
-        val handpone:TextView = findViewById(R.id.tv_NoHp)
-        val alamat:TextView = findViewById(R.id.tv_Alamat)
-        val bio:TextView = findViewById(R.id.tv_Bio)
 
-        val bundle: Bundle? = intent.extras
-        val bNama = bundle!!.getString("idnama")
-        val bFoto = bundle.getInt("idfoto")
-        val bHandphone = bundle.getString("idhandphone")
-        val bAlamat = bundle.getString("idalamat")
-        val bBio = bundle.getString("idbio")
+        val intss = intent
+        val nameT = intss.getStringExtra("NAMET")
+        val nomorhpT = intss.getStringExtra("NOMORHPT")
+        val descT = intss.getStringExtra("DESCT")
+        val imgT = intss.getStringExtra("IMGT")
 
-        gambar.setImageResource(bFoto)
-        nama.text = bNama
-        handpone.text = bHandphone
-        alamat.text = bAlamat
-        bio.text = bBio
+        binding.tvNama.text = nameT
+        binding.tvNoHp.text = nomorhpT
+        binding.tvBio.text = descT
+        binding.ivFoto.loadImage(imgT)
+
 
 
     }
